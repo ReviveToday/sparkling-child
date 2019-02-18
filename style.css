@@ -1,0 +1,195 @@
+/*
+	Theme Name:   Sparkling for ReviveToday
+	Theme URI:    https://github.com/ReviveToday/modernscape-2
+	Description:  Twenty Fifteen Child Theme
+	Author:       ReviveToday
+	Author URI:   https://revive.today
+	Template:     sparkling
+	Version:      0.1.0
+	License:      GNU General Public License v2 or later
+	License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+	Text Domain:  modernscape-ii
+*/
+
+a {
+	color: #020000;
+}
+
+/*h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	color: #444;
+}*/
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, a:hover, a:focus {
+	color: black;
+}
+
+.entry-meta a {
+	color: #020000;
+}
+
+.entry-title a:hover {
+	color: #138E96;
+}
+
+.pagination li a {
+	color: #138E96;
+}
+
+#secondary .widget a:hover {
+	color: #DADADA;
+}
+
+#secondary .widget .post-content a {
+	color: #020000;
+}
+
+.tagcloud a:hover {
+	background-color: #363636;
+	border-color: #363636;
+}
+
+.woocommerce #respond input#submit.alt, .woocommerce a.button.alt,
+.woocommerce button.button.alt, .woocommerce input.button.alt,
+a.more-link {
+	background-color: #138E96;
+	border-color: #138E96;
+}
+
+button, .button {
+	background-color: #138E96;
+	color: #020000;
+}
+
+#infinite-handle span:hover {
+	background-color: #363636;
+}
+
+.navbar.navbar-default {
+	background-color: #138E96;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+	color: #CECECE;
+}
+
+.navbar-default .navbar-nav .dropdown-menu > li:hover,
+.navbar-default .navbar-nav .dropdown-menu > li:focus {
+	background-color: #138E96;
+}
+
+.dropdown-menu > li > a:focus,
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li:hover > a,
+.dropdown-menu > li:hover > .caret {
+	color: #EDE1E1;
+}
+
+.navbar.navbar-default, .flex-caption h2 {
+	background-image: url('https://revive.today/wp-content/themes/sparkling/assets/image/rt-corner-retro.svg');
+	background-repeat: no-repeat;
+}
+
+.navbar-default .navbar-nav.sparkling-mobile-menu > li:hover > a {
+	color: #F5F7FA;
+}
+
+.navbar-default .navbar-nav.sparkling-mobile-menu > li:hover > a,
+.navbar-default .navbar-nav.sparkling-mobile-menu > li:hover > .caret {
+	color: #F5F7FA;
+}
+
+.navbar-default .navbar-nav.sparkling-mobile-menu > li.open > a,
+.navbar-default .navbar-nav.sparkling-mobile-menu > li.open > .caret {
+	color: #CECECE;
+}
+
+.dropdown-menu {
+	background-color: #020202;
+}
+
+.navbar-default .navbar-nav .current-menu-ancestor a.dropdown-toggle {
+	color: #EDE1E1;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+	color: #138E96;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+.navbar-default .navbar-nav .dropdown-menu > li.active > .caret,
+.navbar-default .navbar-nav .dropdown-menu > li.open > a {
+	color: #EDE1E1;
+}
+
+.navbar-default .navbar-nav > li:hover > a,
+.navbar-default .navbar-nav > li:hover > .caret,
+.dropdown-menu > li > .caret {
+	color: #F5F7FA;
+}
+
+.navbar-default .navbar-nav li.open > a,
+.navbar-default .navbar-nav li.open > .caret {
+	color: #EDE1E1;
+}
+
+.navbar-default .navbar-toggle {
+	border-color: transparent;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: #dadada;
+}
+
+.dropdown-menu > li > a {
+	color: #D8CDCD;
+}
+
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:focus,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > .caret {
+	color: #EDE1E1;
+}
+
+.navbar-nav > li:hover > .caret {
+	color: #CECECE;
+}
+
+.nav > li > a, .site-info .nav a, .navbar-default .navbar-nav {
+	text-transform: inherit!important;
+}
+
+.navigation .wp-pagenavi-pagination span.current,
+.navigation .wp-pagenavi-pagination a:hover {
+	background-color: #138E96;
+	border-color: #138E96;
+}
+
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover {
+	color: #363636;
+}
+
+#image-navigation .nav-previous a:hover,
+#image-navigation .nav-next a:hover {
+	background-color: #363636;
+}
+
+.site-info a {
+	color: #DADADA;
+}
+
+.scroll-to-top:hover {
+	background: black;
+}
+
+.cfa-button {
+	color: #138E96;
+	border-color: #138E96;
+}
+
+.cfa-button:hover {
+	background-color: #363636;
+}
