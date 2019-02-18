@@ -5,6 +5,11 @@
  */
 include_once __DIR__ . '/extras.php';
 
+/**
+ * Overrides customier values.
+ */
+include_once __DIR__ . '/customizer.php';
+
 add_action( 'wp_enqueue_scripts', function () {
 	// Add Bootstrap default CSS
 	wp_enqueue_style( 'sparkling-bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css' );
