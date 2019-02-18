@@ -71,3 +71,22 @@ add_action( 'wp_enqueue_scripts', function () {
 	wp_enqueue_style( 'sparkling', get_template_directory_uri() . '/style.css' );
 	wp_enqueue_style( 'sparkling-child', get_stylesheet_directory_uri() . '/style.css', [ 'sparkling' ], wp_get_theme()->get('Version') );
 });
+
+function get_layout_class() {
+	global $post;
+	if ( is_singular() && get_post_meta( $post->ID, 'site_layout', true ) && ! is_singular( array( 'product' ) ) ) {
+		$layout_class = get_post_meta( $post->ID, 'site_layout', true );
+	} elseif ( function_exists( 'is_woocommerce' ) && function_exists( 'is_it_woocommerce_page' ) && is_it_woocommerce_page() && ! is_search() ) {// Check for WooCommerce
+		$page_id = ( is_product() ) ? $post->ID : get_woocommerce_page_id();
+
+		if ( $page_id && get_post_meta( $page_id, 'site_layout', true ) ) {
+			$layout_class = get_post_meta( $page_id, 'site_layout', true );
+		} else {
+			$layout_class = of_get_option( 'woo_site_layout', 'full-width' );
+		}
+	} else {
+		$layout_class = of_get_option( 'site_layout', 'full-width' );
+	}
+
+	return $layout_class;
+}
