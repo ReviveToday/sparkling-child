@@ -1,4 +1,10 @@
 <?php
+
+/**
+ * Extra function replacers.
+ */
+include_once __DIR__ . '/extras.php';
+
 add_action( 'wp_enqueue_scripts', function () {
 	// Add Bootstrap default CSS
 	wp_enqueue_style( 'sparkling-bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css' );

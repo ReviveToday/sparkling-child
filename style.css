@@ -86,6 +86,10 @@ button, .button {
 	color: #EDE1E1;
 }
 
+.flex-caption h2 {
+	background: #138E96;
+}
+
 .navbar.navbar-default, .flex-caption h2 {
 	background-image: url('rt-corner-retro.svg');
 	background-repeat: no-repeat;
