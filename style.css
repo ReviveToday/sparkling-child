@@ -87,7 +87,7 @@ button, .button {
 }
 
 .navbar.navbar-default, .flex-caption h2 {
-	background-image: url('https://revive.today/wp-content/themes/sparkling/assets/image/rt-corner-retro.svg');
+	background-image: url('rt-corner-retro.svg');
 	background-repeat: no-repeat;
 }
 
