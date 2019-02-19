@@ -81,13 +81,5 @@ add_action( 'customize_register', function( $wp_customize ) {
 		)
 	);
 
-	$wp_customize->add_setting(
-		'sparkling[footer_social]', array(
-			'default'           => 1,
-			'type'              => 'option',
-			'sanitize_callback' => 'sparkling_sanitize_checkbox',
-		)
-	);
-
 	$wp_customize->remove_section( 'epsilon_recomended_section' );
 }, 99 );
