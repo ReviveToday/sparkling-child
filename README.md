@@ -9,7 +9,7 @@ links not found in the blog.
 
 * Featured image is what will be displayed in the background.
 * The WordPress body text will be displayed in the bottom left, including the title.
-* `URL` is a valid meta entry, which will resolve as a URL in the slider.
+* `rt_url` is a valid meta entry, which will resolve as a URL in the slider.
 
 ## Advanced Ads Container
 `above-title` custom placement is supported, which will display the advert above the title, as per the Acceptable Ads guidelines.

@@ -1,5 +1,5 @@
 /*
-	Theme Name:   Sparkling for ReviveToday
+	Theme Name:   ReviveToday
 	Theme URI:    https://github.com/ReviveToday/modernscape-2
 	Description:  Twenty Fifteen Child Theme
 	Author:       ReviveToday
@@ -87,7 +87,7 @@ button, .button {
 }
 
 .flex-caption h2 {
-	background: #138E96;
+	background-color: #138E96!important;
 }
 
 .navbar.navbar-default, .flex-caption h2 {
