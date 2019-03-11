@@ -11,6 +11,9 @@ links not found in the blog.
 * The WordPress body text will be displayed in the bottom left, including the title.
 * `rt_url` is a valid meta entry, which will resolve as a URL in the slider.
 
+## Shareblocks
+Simple, toggleable buttons that mimic what the Jetpack share buttons would do, but with minimalistic functionality.
+
 ## Advanced Ads Container
 `above-title` custom placement is supported, which will display the advert above the title, as per the Acceptable Ads guidelines.
 
