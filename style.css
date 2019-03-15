@@ -244,3 +244,36 @@ button, .button {
 	border-bottom: solid 2px rgb(205, 19, 0);
 }
 /* End of ReviveToday Share block functionality */
+
+/* ReviveToday Alerts */
+.rt-alert {
+	padding: 1em;
+	background-color: #E7E7E7;
+	border-bottom: solid 2px #464644;
+	color: #464644;
+}
+
+.rt-alert.info {
+	background-color: #D9EDF7;
+	border-bottom: solid 2px #31708F;
+	color: #224D63;
+}
+
+.rt-alert.success {
+	background-color: #BEDDB6;
+	border-bottom: solid 2px #234323;
+	color: #234323;
+}
+
+.rt-alert.warning {
+	background-color: #FCEA92;
+	border-bottom: solid 2px #5D4827;
+	color: #5D4827;
+}
+
+.rt-alert.error {
+	background-color: #F2DEDE;
+	border-bottom: solid 2px #A94442;
+	color: #A94442;
+}
+/* End of ReviveToday Alerts */
