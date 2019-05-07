@@ -1,6 +1,8 @@
 # Sparkling for ReviveToday
 Small modifications to the [sparkling][source] theme for the [ReviveToday][site] website.
 
+![Theme preview](screenshot.png)
+
 These modifications are largely bespoke, so we fully recommend you check out the original [ColorLib version][source].
 
 ## Slider
