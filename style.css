@@ -259,10 +259,25 @@ button, .button {
 	color: #000;
 }
 
+.rt-alert.info::before {
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	content: "\f05a";
+	margin-right: 10px;
+}
+
+
 .rt-alert.success {
 	background-color: #339900;
 	border-bottom: solid 2px #205F00;
 	color: #FFF;
+}
+
+.rt-alert.success::before {
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	content: "\f058";
+	margin-right: 10px;
 }
 
 .rt-alert.warning {
@@ -271,9 +286,23 @@ button, .button {
 	color: #000;
 }
 
+.rt-alert.warning::before {
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	content: "\f071";
+	margin-right: 10px;
+}
+
 .rt-alert.error {
 	background-color: #CC3300;
 	border-bottom: solid 2px #761D00;
 	color: #FFF;
+}
+
+.rt-alert.error::before {
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	content: "\f06a";
+	margin-right: 10px;
 }
 /* End of ReviveToday Alerts */
