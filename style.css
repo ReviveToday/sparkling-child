@@ -108,6 +108,11 @@ button, .button {
 
 .dropdown-menu {
 	background-color: #020202;
+	border-radius: 0;
+}
+
+.dropdown-menu > .active {
+	background-color: #484747;
 }
 
 .navbar-default .navbar-nav .current-menu-ancestor a.dropdown-toggle {
@@ -115,7 +120,7 @@ button, .button {
 }
 
 .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-	color: #138E96;
+	color: #D8CDCD;
 }
 
 .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
