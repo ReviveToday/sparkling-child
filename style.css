@@ -85,6 +85,7 @@ button, .button {
 
 .flex-caption h2 {
 	background-color: #138E96!important;
+	border-bottom: 0.125em solid #0B4E53!important;
 }
 
 .navbar.navbar-default, .flex-caption h2 {
