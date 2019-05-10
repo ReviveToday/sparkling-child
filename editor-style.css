@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i|Roboto+Slab:300,400,700');
+
+body {
+	font-family: 'Open Sans', sans-serif;	
+}
+
+#post-title-1, h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    font-family: 'Roboto Slab', serif;
+}
+
+/* ReviveToday Alerts */
+.rt-alert {
+	padding: 1em;
+	background-color: #E7E7E7;
+	border-bottom: solid 2px #8E8E8E;
+	color: #464644;
+}
+
+.rt-alert.info {
+	background-color: #66CCFF;
+	border-bottom: solid 2px #3E94C0;
+	color: #000;
+}
+
+
+.rt-alert.success {
+	background-color: #339900;
+	border-bottom: solid 2px #205F00;
+	color: #FFF;
+}
+
+.rt-alert.warning {
+	background-color: #FFCC00;
+	border-bottom: solid 2px #C69E00;
+	color: #000;
+}
+
+.rt-alert.error {
+	background-color: #CC3300;
+	border-bottom: solid 2px #761D00;
+	color: #FFF;
+}
+/* End of ReviveToday Alerts */

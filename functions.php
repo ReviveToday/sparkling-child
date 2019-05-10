@@ -98,20 +98,26 @@ function get_layout_class() {
 	return $layout_class;
 }
 
-add_theme_support( 'editor-color-palette', [
-	[
-		'name'  => 'ReviveToday Classic',
-		'slug'  => 'rt-classic',
-		'color'	=> '#33809E',
-	],
-	[
-		'name'  => 'ReviveToday Original',
-		'slug'  => 'rt-original',
-		'color'	=> '#138E96',
-	],
-	[
-		'name'  => 'White',
-		'slug'  => 'white',
-		'color' => '#FFF',
-	],
-]);
+add_action( 'after_setup_theme', function() {
+	add_theme_support( 'editor-styles' );
+
+	add_editor_style( 'editor-style.css' );
+
+	add_theme_support( 'editor-color-palette', [
+		[
+			'name'  => 'ReviveToday Classic',
+			'slug'  => 'rt-classic',
+			'color'	=> '#33809E',
+		],
+		[
+			'name'  => 'ReviveToday Original',
+			'slug'  => 'rt-original',
+			'color'	=> '#138E96',
+		],
+		[
+			'name'  => 'White',
+			'slug'  => 'white',
+			'color' => '#FFF',
+		],
+	]);
+});
