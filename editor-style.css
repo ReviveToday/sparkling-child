@@ -9,6 +9,11 @@ body {
     font-family: 'Roboto Slab', serif;
 }
 
+.wp-block-button__link {
+	background-color: #33809e;
+	border-bottom: solid .2em #0b4e53;
+}
+
 /* ReviveToday Alerts */
 .rt-alert {
 	padding: 1em;
