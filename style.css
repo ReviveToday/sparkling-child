@@ -52,8 +52,16 @@ a.more-link {
 }
 
 button, .button {
-	background-color: #138E96;
-	color: #020000;
+	background-color: #138E96!important;
+	color: #FFF!important;
+	font-size: 14px!important;
+	border-radius: 0!important;
+	text-transform: none!important;
+	border-bottom: solid .2em #0b4e53!important;
+}
+
+button.navbar-toggle {
+	border-bottom: 0!important;
 }
 
 #infinite-handle span:hover {
