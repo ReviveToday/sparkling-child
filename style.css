@@ -158,7 +158,7 @@ button.navbar-toggle {
 	background-color: #dadada;
 }
 
-.dropdown-menu > li > a {
+.navbar-default .navbar-nav > .active > a, .dropdown-menu > li > a {
 	color: #D8CDCD;
 }
 
