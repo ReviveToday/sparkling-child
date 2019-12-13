@@ -14,11 +14,9 @@ $rt_reddit_url   = "https://www.reddit.com/submit?url={$rt_url}";
 ?>
 
 <div class="rt-shareblock">
-	<h3>Share</h3>
+	<hr>
+	<h3>Share this on...</h3>
 	<ul>
-		<li class="rts twitter"><a target="_blank" href="<?php echo $rt_twitter_url; ?>">Twitter</a></li>
-		<li class="rts facebook"><a target="_blank" href="<?php echo $rt_facebook_url; ?>">Facebook</a></li>
-		<li class="rts reddit"><a target="_blank" href="<?php echo $rt_reddit_url; ?>">Reddit</a></li>
-		<li class="rts whatsapp"><a target="_blank" href="<?php echo $rt_whatsapp_url; ?>">WhatsApp</a></li>
+		<li><a class="rts facebook" target="_blank" href="<?php echo $rt_facebook_url; ?>"><i class="fab fa-facebook-f" aria-hidden="true" title="Share this on Facebook"></i></a></li><li><a class="rts twitter" target="_blank" href="<?php echo $rt_twitter_url; ?>"><i class="fab fa-twitter" aria-hidden="true" title="Share this on Twitter"></i></a></li><li><a class="rts reddit" target="_blank" href="<?php echo $rt_reddit_url; ?>"><i class="fab fa-reddit-alien" aria-hidden="true" title="Share this on Reddit"></i></a></li><li><a class="rts whatsapp" target="_blank" href="<?php echo $rt_whatsapp_url; ?>"><i class="fab fa-whatsapp" aria-hidden="true" title="Share this on WhatsApp"></i></a></li>
 	</ul>
 </div>

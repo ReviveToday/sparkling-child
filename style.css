@@ -5,7 +5,7 @@
 	Author:       ReviveToday
 	Author URI:   https://revive.today
 	Template:     sparkling
-	Version:      1.0.2
+	Version:      1.1
 	License:      GNU General Public License v3 or later
 	License URI:  http://www.gnu.org/licenses/gpl-3.0.html
 	Text Domain:  modernscape-ii
@@ -218,50 +218,56 @@ button.navbar-toggle {
 .rt-shareblock ul {
 	padding: 0;
 	list-style: none;
+	font-size: 2em;
 }
 
-.rt-shareblock .rts {
+.rt-shareblock li {
 	display: inline-block;
 }
 
+.rt-shareblock a {
+	color: white;
+	text-shadow: 0px 1px 1px black;
+}
+
+.rt-shareblock .rts {
+	display: block;
+	padding: 5px 10px 5px 10px;
+	margin: 5px;
+	background-color: rgb(19, 142, 150);
+	border-bottom: solid 2px rgb(19, 92, 100);
+	width: 100px;
+	text-align: center;
+}
+
+.rt-shareblock .rts.twitter {
+	background-color: rgb(0, 172, 238);
+	border-bottom: solid 2px rgb(0, 122, 188);
+}
+
+.rt-shareblock .rts.facebook {
+	background-color: rgb(59, 89, 152);
+	border-bottom: solid 2px rgb(9, 39, 102);
+}
+
+.rt-shareblock .rts.whatsapp {
+	background-color: rgb(67, 216, 84);
+	border-bottom: solid 2px rgb(17, 166, 34);
+}
+
+.rt-shareblock .rts.reddit {
+	background-color: rgb(255, 69, 0);
+	border-bottom: solid 2px rgb(205, 19, 0);
+}
+
 @media (max-width: 400px) {
-    .rt-shareblock .rts {
-		display: block;
-		padding-top: 5px;
-		padding-bottom: 5px;
+    .rt-shareblock ul {
+		text-align: center;
 	}
 	
 	.rt-shareblock .rts a {
 		font-size: 1.25em;
 	}
-}
-
-.rt-shareblock .rts a {
-	color: white;
-	text-shadow: 0px 1px 1px black;
-	padding: 5px 10px 5px 10px;
-	background-color: rgb(19, 142, 150);
-	border-bottom: solid 2px rgb(19, 92, 100);
-}
-
-.rt-shareblock .rts.twitter a {
-	background-color: rgb(0, 172, 238);
-	border-bottom: solid 2px rgb(0, 122, 188);
-}
-
-.rt-shareblock .rts.facebook a {
-	background-color: rgb(59, 89, 152);
-	border-bottom: solid 2px rgb(9, 39, 102);
-}
-
-.rt-shareblock .rts.whatsapp a {
-	background-color: rgb(67, 216, 84);
-	border-bottom: solid 2px rgb(17, 166, 34);
-}
-
-.rt-shareblock .rts.reddit a {
-	background-color: rgb(255, 69, 0);
-	border-bottom: solid 2px rgb(205, 19, 0);
 }
 /* End of ReviveToday Share block functionality */
 
