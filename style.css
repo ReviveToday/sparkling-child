@@ -5,7 +5,7 @@
 	Author:       ReviveToday
 	Author URI:   https://revive.today
 	Template:     sparkling
-	Version:      1.1.1
+	Version:      1.2
 	License:      GNU General Public License v3 or later
 	License URI:  http://www.gnu.org/licenses/gpl-3.0.html
 	Text Domain:  modernscape-ii
@@ -211,7 +211,7 @@ button.navbar-toggle {
 }
 
 .site-footer {
-	border-top-width: 0.25em!important;	
+	border-top-width: 0.25em!important;
 }
 
 /* ReviveToday Share block functionality */
@@ -261,10 +261,10 @@ button.navbar-toggle {
 }
 
 @media (max-width: 400px) {
-    .rt-shareblock ul {
+	.rt-shareblock ul {
 		text-align: center;
 	}
-	
+
 	.rt-shareblock .rts a {
 		font-size: 1.25em;
 	}
@@ -361,5 +361,5 @@ button.navbar-toggle {
 	height:300px;
 	background-size: contain;
 	background-repeat: no-repeat;
-	background-position: center; 
+	background-position: center;
 }

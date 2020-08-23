@@ -1,30 +1,19 @@
 <?php
-/* *
- * The Header for our theme.
+/**
+ * ReviveToday v2 theme, based upon the Sparkling theme.
  *
- * Displays all of the <head> section and everything up till <div id="content">
- *
- * @package sparkling
+ * @package revivetoday-child
+ * @author soup-bowl <code@soupbowl.io>
+ * @license MIT
  */
 
-if ( isset( $_SERVER['HTTP_USER_AGENT'] ) && ( strpos( $_SERVER['HTTP_USER_AGENT'], 'MSIE' ) !== false ) ) {
-	header( 'X-UA-Compatible: IE=edge,chrome=1' );
-} ?>
+?>
 <!doctype html>
-<!--[if !IE]>
-<html class="no-js non-ie" <?php language_attributes(); ?>> <![endif]-->
-<!--[if IE 7 ]>
-<html class="no-js ie7" <?php language_attributes(); ?>> <![endif]-->
-<!--[if IE 8 ]>
-<html class="no-js ie8" <?php language_attributes(); ?>> <![endif]-->
-<!--[if IE 9 ]>
-<html class="no-js ie9" <?php language_attributes(); ?>> <![endif]-->
-<!--[if gt IE 9]><!-->
-<html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
+<html class="no-js" <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="<?php echo of_get_option( 'nav_bg_color' ); ?>">
+<meta name="theme-color" content="<?php echo esc_attr( of_get_option( 'nav_bg_color' ) ); ?>">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 
 <?php wp_head(); ?>
@@ -40,7 +29,7 @@ if ( isset( $_SERVER['HTTP_USER_AGENT'] ) && ( strpos( $_SERVER['HTTP_USER_AGENT
 		<?php
 		if ( of_get_option( 'sticky_header' ) ) {
 			echo 'navbar-fixed-top';}
-?>
+		?>
 " role="navigation">
 			<div class="container">
 				<div class="row">
@@ -53,22 +42,22 @@ if ( isset( $_SERVER['HTTP_USER_AGENT'] ) && ( strpos( $_SERVER['HTTP_USER_AGENT
 								<span class="icon-bar"></span>
 							</button>
 
-														<div id="logo">
-															<?php if ( get_header_image() != '' ) { ?>
-																	<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php header_image(); ?>"  height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="<?php bloginfo( 'name' ); ?>"/></a>
-																		<?php if ( is_home() ) { ?>
-																		<h1 class="site-name hide-site-name"><a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-																	<?php
-}
-} else {
-	echo is_home() ? '<h1 class="site-name">' : '<p class="site-name">';
-	?>
-																		<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-																<?php echo is_home() ? '</h1>' : '</p>'; ?>
-															<?php } ?>
-														</div><!-- end of #logo -->
+							<div id="logo">
+								<?php if ( '' !== get_header_image() ) { ?>
+										<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php header_image(); ?>"  height="<?php echo esc_attr( get_custom_header()->height ); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" alt="<?php bloginfo( 'name' ); ?>"/></a>
+											<?php if ( is_home() ) { ?>
+											<h1 class="site-name hide-site-name"><a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+												<?php
+											}
+								} else {
+									echo is_home() ? '<h1 class="site-name">' : '<p class="site-name">';
+									?>
+											<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+									<?php echo is_home() ? '</h1>' : '</p>'; ?>
+								<?php } ?>
+							</div><!-- end of #logo -->
 						</div>
-						<?php sparkling_header_menu(); // main navigation ?>
+						<?php sparkling_header_menu(); // main navigation. ?>
 					</div>
 				</div>
 			</div>
@@ -84,6 +73,9 @@ if ( isset( $_SERVER['HTTP_USER_AGENT'] ) && ( strpos( $_SERVER['HTTP_USER_AGENT
 
 		<div class="container main-content-area">
 			<?php $layout_class = get_layout_class(); ?>
-			<div class="row <?php echo $layout_class; ?>">
-				<div class="main-content-inner <?php echo sparkling_main_content_bootstrap_classes(); ?>">
-					<?php if (function_exists('the_ad_placement')) { the_ad_placement('above-title'); }
+			<div class="row <?php echo esc_attr( $layout_class ); ?>">
+				<div class="main-content-inner <?php echo esc_attr( sparkling_main_content_bootstrap_classes() ); ?>">
+					<?php
+					if ( function_exists( 'the_ad_placement' ) ) {
+						the_ad_placement( 'above-title' );
+					}

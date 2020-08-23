@@ -1,11 +1,12 @@
 <?php
 /**
- * The template for displaying the footer.
+ * ReviveToday v2 theme, based upon the Sparkling theme.
  *
- * Contains the closing of the #content div and all content after
- *
- * @package sparkling
+ * @package revivetoday-child
+ * @author soup-bowl <code@soupbowl.io>
+ * @license MIT
  */
+
 ?>
 		</div><!-- close .row -->
 	</div><!-- close .container -->
@@ -24,13 +25,13 @@
 					<?php
 					if ( of_get_option( 'footer_social' ) ) {
 						sparkling_social_icons();}
-?>
+					?>
 					<nav role="navigation" class="col-md-6">
 						<?php sparkling_footer_links(); ?>
 					</nav>
 					<div class="copyright col-md-6">
-						<?php echo of_get_option( 'custom_footer_text', 'Copyright © 2018 Revive Today. ' ); ?>
-						<?php printf( esc_html__( 'Hello from London. %1$s.', 'sparkling' ), '<a href="https://github.com/revivetoday/sparkling-child" target="_blank">Theme Details</a>' ); ?>
+						<?php echo esc_html( of_get_option( 'custom_footer_text', 'Copyright &copy; 2018 Revive Today. ' ) ); ?>
+						<?php printf( esc_html( 'Hello from London. %1$s.' ), '<a href="https://github.com/revivetoday/sparkling-child" target="_blank">Theme Details</a>' ); ?>
 					</div>
 				</div>
 			</div><!-- .site-info -->

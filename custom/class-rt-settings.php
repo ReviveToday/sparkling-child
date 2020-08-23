@@ -1,10 +1,31 @@
 <?php
-class rt_settings {
+/**
+ * ReviveToday v2 theme, based upon the Sparkling theme.
+ *
+ * @package revivetoday-child
+ * @author soup-bowl <code@soupbowl.io>
+ * @license MIT
+ */
+
+/**
+ * Setting modifications relating to ReviveToday.
+ */
+class Rt_Settings {
+	/**
+	 * Hooks into the WordPress system.
+	 *
+	 * @return void Runs add_action to hook into WP.
+	 */
 	public function register_hooks() {
 		add_action( 'add_meta_boxes', [ &$this, 'form_setup' ] );
 		add_action( 'publish_page', [ &$this, 'store_custom' ] );
 	}
 
+	/**
+	 * Adds a box in editor view to enable custom settings.
+	 *
+	 * @return void Adds meta boxes into WP.
+	 */
 	public function form_setup() {
 		add_meta_box(
 			'rtsettings',
@@ -29,11 +50,17 @@ class rt_settings {
 		);
 	}
 
-	public function store_custom( $post_ID ) {
+	/**
+	 * Handles the storage of custom setting changes.
+	 *
+	 * @param integer $post_id Post ID of the processed entity.
+	 * @return void
+	 */
+	public function store_custom( $post_id ) {
 		$rt_dlu = ( isset( $_REQUEST['rt_displastupdated'] ) && '1' === $_REQUEST['rt_displastupdated'] ) ? true : false;
-		update_post_meta( $post_ID, 'rt_show_last_updated', $rt_dlu );
+		update_post_meta( $post_id, 'rt_show_last_updated', $rt_dlu );
 
 		$rt_dsb = ( isset( $_REQUEST['rt_dispsharingbuttons'] ) && '1' === $_REQUEST['rt_dispsharingbuttons'] ) ? true : false;
-		update_post_meta( $post_ID, 'rt_show_sharing_buttons', $rt_dsb );
+		update_post_meta( $post_id, 'rt_show_sharing_buttons', $rt_dsb );
 	}
 }

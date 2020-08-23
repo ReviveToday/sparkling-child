@@ -1,8 +1,10 @@
 <?php
 /**
- * The template for displaying 404 pages (Not Found).
+ * ReviveToday v2 theme, based upon the Sparkling theme.
  *
- * @package sparkling
+ * @package revivetoday-child
+ * @author soup-bowl <code@soupbowl.io>
+ * @license MIT
  */
 
 get_header(); ?>
