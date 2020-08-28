@@ -242,6 +242,16 @@ button.navbar-toggle {
 	border-top-width: 0.25em!important;
 }
 
+@media (max-width: 720px) {
+	.main-content-area {
+		margin-top: 0;
+	}
+	.container {
+		padding-right: 0;
+		padding-left: 0;
+	}
+}
+
 /* ReviveToday Share block functionality */
 .rt-shareblock {
 	font-size: 18px;
