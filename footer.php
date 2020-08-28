@@ -30,7 +30,8 @@
 						<?php sparkling_footer_links(); ?>
 					</nav>
 					<div class="copyright col-md-6">
-						<?php echo esc_html( of_get_option( 'custom_footer_text', 'Copyright &copy; 2018 Revive Today. ' ) ); ?>
+						<?php $year = date('Y'); ?>
+						<?php echo esc_html( of_get_option( 'custom_footer_text', "&copy; 2018-{$year} Revive Today." ) ); ?>
 						<?php printf( esc_html( 'Hello from London. %1$s.' ), '<a href="https://github.com/revivetoday/sparkling-child" target="_blank">Theme Details</a>' ); ?>
 					</div>
 				</div>

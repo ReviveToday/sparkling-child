@@ -11,16 +11,41 @@
 	Text Domain:  modernscape-ii
 */
 
+body {
+	font-size: 18px;
+}
+
 a {
 	color: #020000;
 }
 
+h1, .h1 {
+	font-size: 36px;
+}
+
+h2, .h2 {
+	font-size: 32px;
+}
+
+h3, .h3 {
+	font-size: 26px;
+}
+
+h4, .h4 {
+	font-size: 22px;
+}
+
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, a:hover, a:focus {
-	color: black;
+	color: #444;
+	margin: 20px 0 20px;
 }
 
 .entry-meta a {
 	color: #020000;
+}
+
+.entry-title {
+	font-size: 36px;
 }
 
 .entry-title a:hover {
@@ -215,6 +240,10 @@ button.navbar-toggle {
 }
 
 /* ReviveToday Share block functionality */
+.rt-shareblock {
+	font-size: 18px;
+}
+
 .rt-shareblock ul {
 	padding: 0;
 	list-style: none;
@@ -275,13 +304,13 @@ button.navbar-toggle {
 .rt-alert {
 	padding: 1em;
 	background-color: #E7E7E7;
-	border-bottom: solid 2px #8E8E8E;
+	border-bottom: solid 4px #8E8E8E;
 	color: #464644;
 }
 
 .rt-alert.info {
 	background-color: #66CCFF;
-	border-bottom: solid 2px #3E94C0;
+	border-bottom: solid 4px #3E94C0;
 	color: #000;
 }
 
@@ -295,7 +324,7 @@ button.navbar-toggle {
 
 .rt-alert.success {
 	background-color: #339900;
-	border-bottom: solid 2px #205F00;
+	border-bottom: solid 4px #205F00;
 	color: #FFF;
 }
 
@@ -308,7 +337,7 @@ button.navbar-toggle {
 
 .rt-alert.warning {
 	background-color: #FFCC00;
-	border-bottom: solid 2px #C69E00;
+	border-bottom: solid 4px #C69E00;
 	color: #000;
 }
 
@@ -321,7 +350,7 @@ button.navbar-toggle {
 
 .rt-alert.error {
 	background-color: #CC3300;
-	border-bottom: solid 2px #761D00;
+	border-bottom: solid 4px #761D00;
 	color: #FFF;
 }
 
@@ -338,6 +367,8 @@ button.navbar-toggle {
 	background-color: #138E96;
 	border-bottom: solid 0.2em #0B4E53;
 	text-shadow: 0 1px 1px #000;
+	border-radius: 0px;
+	margin: 20px 0 20px;
 }
 
 .has-background.has-rt-classic-background-color {
