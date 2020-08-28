@@ -408,6 +408,19 @@ button.navbar-toggle {
 	background-position: center;
 }
 
+/* Content Views */
+.pt-cv-grid .btn {
+	background-color: #138e96 !important;
+	color: #fff !important;
+	font-size: 14px !important;
+	border-radius: 0 !important;
+	text-transform: none !important;
+	border: 0;
+	border-bottom: solid .2em #0b4e53 !important;
+	text-shadow: 0 1px 1px #000;
+}
+/* ! Content Views */
+
 /* Dark Mode */
 .dark-mode h1, .dark-mode .h1,
 .dark-mode h2, .dark-mode .h2,
