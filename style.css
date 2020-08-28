@@ -409,7 +409,7 @@ button.navbar-toggle {
 }
 
 /* Content Views */
-.pt-cv-grid .btn {
+.pt-cv-readmore {
 	background-color: #138e96 !important;
 	color: #fff !important;
 	font-size: 14px !important;
