@@ -90,6 +90,8 @@ add_action(
 		// ReviveToday - Actually custom part.
 		wp_enqueue_style( 'sparkling', get_template_directory_uri() . '/style.css', null, '1.0' );
 		wp_enqueue_style( 'sparkling-child', get_stylesheet_directory_uri() . '/style.css', [ 'sparkling' ], wp_get_theme()->get( 'Version' ) );
+
+		wp_enqueue_script( 'rt-dark', get_stylesheet_directory_uri() . '/dark.js', array(), '1', true );
 	}
 );
 
