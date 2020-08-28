@@ -16,6 +16,9 @@ links not found in the blog.
 ## Shareblocks
 Simple, toggleable buttons that mimic what the Jetpack share buttons would do, but with minimalistic functionality.
 
+## Dark Mode
+Add a menu item with the class name `rt-toggle-bright`, and it will function as a dark mode toggle.
+
 ## Advanced Ads Container
 `above-title` custom placement is supported, which will display the advert above the title, as per the Acceptable Ads guidelines.
 

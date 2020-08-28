@@ -11,6 +11,11 @@ if ( rt_is_dark !== null && rt_is_dark === 'yes' ) {
 	document.body.classList.add( 'dark-mode' );
 }
 
+document.getElementsByClassName('rt-toggle-bright')[0].getElementsByTagName('A')[0].onclick = function() {
+	event.preventDefault();
+	darkmode_toggle();
+}
+
 /**
  * Enable and disable the dark mode modifications.
  */
