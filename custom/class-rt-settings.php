@@ -34,6 +34,7 @@ class Rt_Settings {
 				$rt_dlu = (int) get_post_meta( $post->ID, 'rt_show_last_updated', true );
 				$rt_dsb = (int) get_post_meta( $post->ID, 'rt_show_sharing_buttons', true );
 				?>
+				<input type="hidden" name="rt_nonce" value="<?php echo esc_attr( wp_create_nonce( 'rt_nonce' ) ); ?>">
 				<div>
 					<input type="checkbox" name="rt_displastupdated" value="1" <?php checked( $rt_dlu, 1 ); ?> />
 					<label for="rt_displastupdated">Show last updated</label>
@@ -57,10 +58,13 @@ class Rt_Settings {
 	 * @return void
 	 */
 	public function store_custom( $post_id ) {
-		$rt_dlu = ( isset( $_REQUEST['rt_displastupdated'] ) && '1' === $_REQUEST['rt_displastupdated'] ) ? true : false;
-		update_post_meta( $post_id, 'rt_show_last_updated', $rt_dlu );
+		if ( isset( $_REQUEST['rt_nonce'] )
+		&& wp_verify_nonce( sanitize_key( $_REQUEST['rt_nonce'] ), 'rt_nonce' ) ) {
+			$rt_dlu = ( isset( $_REQUEST['rt_displastupdated'] ) && '1' === $_REQUEST['rt_displastupdated'] ) ? true : false;
+			update_post_meta( $post_id, 'rt_show_last_updated', $rt_dlu );
 
-		$rt_dsb = ( isset( $_REQUEST['rt_dispsharingbuttons'] ) && '1' === $_REQUEST['rt_dispsharingbuttons'] ) ? true : false;
-		update_post_meta( $post_id, 'rt_show_sharing_buttons', $rt_dsb );
+			$rt_dsb = ( isset( $_REQUEST['rt_dispsharingbuttons'] ) && '1' === $_REQUEST['rt_dispsharingbuttons'] ) ? true : false;
+			update_post_meta( $post_id, 'rt_show_sharing_buttons', $rt_dsb );
+		}
 	}
 }

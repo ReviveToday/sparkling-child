@@ -102,12 +102,12 @@ add_action(
 		wp_enqueue_style( 'rt-login', get_stylesheet_directory_uri() . '/style-login.css', [], '1' );
 
 		$logo_url = get_site_icon_url( '150' );
-		$logo_css = ( ! empty( $logo_url ) ) ? "background-image: url(\"{$logo_url}\")" : null;
+		$logo_css = ( ! empty( $logo_url ) ) ? $logo_url : null;
 		if ( isset( $logo_css ) ) {
 			?>
 			<style type="text/css">
 				#login h1 a, .login h1 a {
-					<?php echo $logo_css; ?>;
+					background-image: url("<?php echo esc_url( $logo_css ); ?>");
 				}
 			</style>
 			<?php
