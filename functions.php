@@ -99,22 +99,19 @@ add_action(
 add_action(
 	'login_enqueue_scripts',
 	function() {
+		wp_enqueue_style( 'rt-login', get_stylesheet_directory_uri() . '/style-login.css', [], '1' );
+
 		$logo_url = get_site_icon_url();
 		$logo_css = ( ! empty( $logo_url ) ) ? "background-image: url(\"{$logo_url}\")" : null;
-		if ( isset( $logo_css ) ) :
+		if ( isset( $logo_css ) ) {
 			?>
 			<style type="text/css">
 				#login h1 a, .login h1 a {
 					<?php echo $logo_css; ?>;
-					height: 80px;
-					width: 100px;
-					background-size: 100px 100px;
-					background-repeat: no-repeat;
-					padding-bottom: 30px;
 				}
 			</style>
 			<?php
-		endif;
+		}
 	}
 );
 

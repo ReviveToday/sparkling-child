@@ -1,0 +1,22 @@
+body {
+	background-image: url('img/login.jpg');
+	background-size: cover;
+}
+
+#loginform {
+	background-image: url('rt-corner-retro.svg');
+	background-size: 50px 50px;
+	background-repeat: no-repeat;
+}
+
+#login h1 a, .login h1 a {
+	height: 80px;
+	width: 100px;
+	background-size: 100px 100px;
+	background-repeat: no-repeat;
+	padding-bottom: 30px;
+}
+
+.login #backtoblog a, .login #nav a {
+    color: #fff;
+}
