@@ -151,7 +151,8 @@ button.navbar-toggle {
 }
 
 .dropdown-menu {
-	background-color: #020202;
+	background-color: rgb(32, 32, 32);
+	border-bottom: solid 0.25em rgb(20, 20, 20);
 	border-radius: 0;
 }
 
