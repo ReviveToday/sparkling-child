@@ -92,6 +92,29 @@ add_action(
 		wp_enqueue_style( 'sparkling-child', get_stylesheet_directory_uri() . '/style.css', [ 'sparkling' ], wp_get_theme()->get( 'Version' ) );
 
 		wp_enqueue_script( 'rt-dark', get_stylesheet_directory_uri() . '/dark.js', array(), '1', true );
+
+	}
+);
+
+add_action(
+	'login_enqueue_scripts',
+	function() {
+		$logo_url = get_site_icon_url();
+		$logo_css = ( ! empty( $logo_url ) ) ? "background-image: url(\"{$logo_url}\")" : null;
+		if ( isset( $logo_css ) ) :
+			?>
+			<style type="text/css">
+				#login h1 a, .login h1 a {
+					<?php echo $logo_css; ?>;
+					height: 80px;
+					width: 100px;
+					background-size: 100px 100px;
+					background-repeat: no-repeat;
+					padding-bottom: 30px;
+				}
+			</style>
+			<?php
+		endif;
 	}
 );
 
