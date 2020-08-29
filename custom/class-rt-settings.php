@@ -58,8 +58,7 @@ class Rt_Settings {
 	 * @return void
 	 */
 	public function store_custom( $post_id ) {
-		if ( isset( $_REQUEST['rt_nonce'] )
-		&& wp_verify_nonce( sanitize_key( $_REQUEST['rt_nonce'] ), 'rt_nonce' ) ) {
+		if ( isset( $_REQUEST['rt_nonce'] ) && wp_verify_nonce( sanitize_key( $_REQUEST['rt_nonce'] ), 'rt_nonce' ) ) {
 			$rt_dlu = ( isset( $_REQUEST['rt_displastupdated'] ) && '1' === $_REQUEST['rt_displastupdated'] ) ? true : false;
 			update_post_meta( $post_id, 'rt_show_last_updated', $rt_dlu );
 

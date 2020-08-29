@@ -30,7 +30,7 @@ function sparkling_rt_register_slider_post_type() {
 		[
 			'label'               => __( 'Sliders', 'sparkling' ),
 			'description'         => __( 'Featured items slider entries', 'sparkling' ),
-			'supports'            => [ 'title', 'editor', 'custom-fields', 'thumbnail' ],
+			'supports'            => [ 'title', 'editor', 'thumbnail' ],
 			'hierarchical'        => false,
 			'public'              => false,
 			'show_ui'             => true,
@@ -140,3 +140,49 @@ function sparkling_featured_slider() {
 		);
 	}
 }
+
+/**
+ * Additional values for use by the homepage slider.
+ *
+ * @param WP_Post $post The post object being edited.
+ * @return void
+ */
+function rt_slider_custombox( WP_Post $post ) {
+	add_meta_box(
+		'rtsliderdetails',
+		'Slider Extras',
+		function ( WP_Post $post ) {
+			$existing = get_post_meta( $post->ID, 'rt_url', true );
+			?>
+			<input type="hidden" name="rt_nonce" value="<?php echo esc_attr( wp_create_nonce( 'rt_nonce' ) ); ?>">
+			<table class="form-table" role="presentation">
+				<tbody>
+				<tr>
+					<td class="first"><label for="rt_slider_url">Slider URL</label></td>
+					<td><input type="text" name="rt_slider_url" value="<?php echo esc_attr( $existing ); ?>" placeholder="http://google.com" style="width:80%"></td>
+				</tr>
+				</tbody>
+			</table>
+			<?php
+		},
+		'sp_rt_featslider',
+		'normal',
+		'high'
+	);
+}
+add_action( 'add_meta_boxes_sp_rt_featslider', 'rt_slider_custombox' );
+
+/**
+ * Stores the result of the slider adjustments.
+ *
+ * @param integer $post_id Post ID of the adjusted slider entity.
+ * @return void
+ */
+function rt_slider_storeresult( int $post_id ) {
+	if ( isset( $_REQUEST['rt_nonce'] ) && wp_verify_nonce( sanitize_key( $_REQUEST['rt_nonce'] ), 'rt_nonce' ) ) {
+		if ( isset( $_REQUEST['rt_slider_url'] ) ) {
+			update_post_meta( $post_id, 'rt_url', esc_url_raw( wp_unslash( $_REQUEST['rt_slider_url'] ) ) );
+		}
+	}
+}
+add_action( 'publish_sp_rt_featslider', 'rt_slider_storeresult' );
