@@ -5,7 +5,7 @@
 	Author:       ReviveToday
 	Author URI:   https://revive.today
 	Template:     sparkling
-	Version:      1.2
+	Version:      1.2.1
 	License:      GNU General Public License v3 or later
 	License URI:  http://www.gnu.org/licenses/gpl-3.0.html
 	Text Domain:  modernscape-ii
@@ -79,7 +79,13 @@ a.more-link {
 	border-color: #138E96;
 }
 
-button, .button {
+/* .fasc-button included for legacy purposes. */
+.fasc-button {
+	padding: 10px;
+	margin: 10px 0 10px;
+}
+
+button, .button, .fasc-button {
 	background-color: #138E96!important;
 	color: #FFF!important;
 	font-size: 14px!important;
@@ -410,6 +416,9 @@ button.navbar-toggle {
 
 /* Content Views */
 .pt-cv-readmore {
+	border-top: none!important;
+	border-left: none!important;
+	border-right: none!important;
 	background-color: #138e96 !important;
 	color: #fff !important;
 	font-size: 14px !important;
