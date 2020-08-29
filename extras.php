@@ -8,6 +8,17 @@
  */
 
 /**
+ * Purges the transient cache for the slider.
+ *
+ * @return void
+ */
+function sparking_rt_refresh_slider() {
+	delete_transient( 'rt_slider' );
+}
+add_action( 'publish_sp_rt_featslider', 'sparking_rt_refresh_slider' );
+add_action( 'trash_sp_rt_featslider', 'sparking_rt_refresh_slider' );
+
+/**
  * Register slider post type. Replaces category-based post implementation with
  * a CPT-based version for finer controls, and not being content-based.
  *
@@ -45,8 +56,6 @@ add_action( 'init', 'sparkling_rt_register_slider_post_type' );
  * @return void
  */
 function sparkling_featured_slider() {
-	// TODO - MODIFY THIS FUNCTION.
-
 	if ( is_front_page() && 1 === of_get_option( 'sparkling_slider_checkbox' ) ) {
 		echo wp_kses(
 			'<div class="flexslider"><ul class="slides">',
@@ -56,21 +65,26 @@ function sparkling_featured_slider() {
 			]
 		);
 
-		$count    = of_get_option( 'sparkling_slide_number' );
-		$slidecat = of_get_option( 'sparkling_slide_categories' );
-
-		$query = new WP_Query(
-			[
-				'post_type'      => 'sp_rt_featslider',
-				'posts_per_page' => $count,
-				'meta_query'     => [
-					[
-						'key'     => '_thumbnail_id',
-						'compare' => 'EXISTS',
+		$query = get_transient( 'rt_slider' );
+		if ( false === $query ) {
+			// phpcs:disable WordPress.DB.SlowDBQuery
+			$query = new WP_Query(
+				[
+					'post_type'      => 'sp_rt_featslider',
+					'posts_per_page' => -1,
+					'meta_query'     => [
+						[
+							'key'     => '_thumbnail_id',
+							'compare' => 'EXISTS',
+						],
 					],
-				],
-			]
-		);
+				]
+			);
+			// phpcs:enable
+
+			set_transient( 'rt_slider', $query, 1 * YEAR_IN_SECONDS );
+		}
+
 		if ( $query->have_posts() ) {
 			while ( $query->have_posts() ) {
 				$query->the_post();

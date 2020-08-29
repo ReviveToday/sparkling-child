@@ -101,7 +101,7 @@ add_action(
 	function() {
 		wp_enqueue_style( 'rt-login', get_stylesheet_directory_uri() . '/style-login.css', [], '1' );
 
-		$logo_url = get_site_icon_url();
+		$logo_url = get_site_icon_url( '150' );
 		$logo_css = ( ! empty( $logo_url ) ) ? "background-image: url(\"{$logo_url}\")" : null;
 		if ( isset( $logo_css ) ) {
 			?>
