@@ -452,6 +452,10 @@ button.navbar-toggle {
 	border-color: #212121;
 }
 
+.dark-mode select {
+	color: #000;
+}
+
 .flexslider {
 	background-color: #000;
 }
