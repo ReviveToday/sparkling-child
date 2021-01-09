@@ -5,7 +5,7 @@
 	Author:       ReviveToday
 	Author URI:   https://revive.today
 	Template:     sparkling
-	Version:      1.2.4
+	Version:      1.2.5
 	License:      GNU General Public License v3 or later
 	License URI:  http://www.gnu.org/licenses/gpl-3.0.html
 	Text Domain:  modernscape-ii
@@ -101,6 +101,24 @@ button.navbar-toggle {
 
 #infinite-handle span:hover {
 	background-color: #363636;
+}
+
+.navbar-banner {
+	height: 80px;
+	max-width: 80px;
+	overflow: visible;
+	position: absolute;
+	top: 5px;
+}
+
+@media (max-width: 720px) {
+	.navbar-banner {
+		height: 45px;
+		max-width: 45px;
+		position: inherit;
+		margin-top: 2px;
+		margin-left: 10px;
+	}
 }
 
 .navbar.navbar-default {

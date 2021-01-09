@@ -44,7 +44,7 @@
 
 							<div id="logo">
 								<?php if ( '' !== get_header_image() ) { ?>
-										<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php header_image(); ?>"  height="<?php echo esc_attr( get_custom_header()->height ); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" alt="<?php bloginfo( 'name' ); ?>"/></a>
+										<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img class="navbar-banner" src="<?php header_image(); ?>"  height="<?php echo esc_attr( get_custom_header()->height ); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" alt="<?php bloginfo( 'name' ); ?>"/></a>
 											<?php if ( is_home() ) { ?>
 											<h1 class="site-name hide-site-name"><a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 												<?php
