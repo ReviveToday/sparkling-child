@@ -425,6 +425,11 @@ button.navbar-toggle {
 	border-bottom: solid .2em #0b4e53 !important;
 	text-shadow: 0 1px 1px #000;
 }
+
+.pt-cv-thumbnail {
+	width: 100%;
+	height: 100%;
+}
 /* ! Content Views */
 
 /* Dark Mode */
