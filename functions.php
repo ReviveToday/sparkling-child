@@ -166,3 +166,13 @@ add_action(
 		);
 	}
 );
+
+add_filter(
+	'pt_cv_field_thumbnail_not_found',
+	function() {
+		$banner = get_stylesheet_directory_uri() . '/img/rt-default-banner.png';
+		return wp_kses_post(
+			"<img src=\"{$banner}\" class=\"pt-cv-thumbnail\">"
+		);
+	}
+);
