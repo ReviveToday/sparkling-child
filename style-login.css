@@ -18,7 +18,7 @@ body {
     width: 320px;
 }
 
-#loginform,
+#loginform, .login #login_error,
 .wp-core-ui .button-primary,
 .wp-core-ui .button-primary:focus,
 .wp-core-ui .button-primary:hover,
@@ -45,6 +45,28 @@ body {
 	left: -100px;
     top: -28px;
     width: 520px;
+}
+
+#login_error {
+	width: 400px;
+	position: absolute;
+    top: 410px;
+    left: 20%;
+    z-index: 1;
+}
+
+#login_error:before {
+    content: "Illegal operation";
+	color: #fff;
+	padding: 2px;
+	font-weight: bold;
+    background: rgb(10,36,106);
+	background: linear-gradient(90deg, rgba(10,36,106,1) 0%, rgba(166,202,240,1) 100%);
+	display: block;
+    position: relative;
+	left: -12px;
+    top: -12px;
+    width: 420px;
 }
 
 #loginform:after {
