@@ -8,11 +8,12 @@ body {
 }
 
 #login {
-	width: 446px;
+	width: 523px;
 }
 
 #loginform {
 	padding-left: 100px;
+	padding-right: 100px;
 	padding-bottom: 10px;
     width: 320px;
 }
@@ -43,7 +44,7 @@ body {
     position: relative;
 	left: -100px;
     top: -28px;
-    width: 450px;
+    width: 520px;
 }
 
 #loginform:after {
@@ -76,6 +77,13 @@ body {
 	border-right-color: #fff!important;
 	border-radius: 0;
 	box-shadow: none;
+}
+
+#wp-submit {
+	position: relative;
+    padding: 0 15px 0 15px;
+    top: -185px;
+    left: 90px;
 }
 
 #loginform .wp-hide-pw {
