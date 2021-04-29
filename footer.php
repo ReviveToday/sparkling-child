@@ -30,9 +30,15 @@
 						<?php sparkling_footer_links(); ?>
 					</nav>
 					<div class="copyright col-md-6">
-						<?php $rt_year = date( 'Y' ); ?>
-						<?php echo esc_html( of_get_option( 'custom_footer_text', "&copy; 2018 - {$rt_year} Revive Today." ) ); ?>
-						<?php printf( esc_html( 'Hello from London. %1$s.' ), '<a href="https://github.com/revivetoday/sparkling-child" target="_blank">Theme Details</a>' ); ?>
+						<?php
+						$rt_year = date( 'Y' );
+						printf(
+							esc_html( '%1$s, %2$s. %3$s.' ),
+							of_get_option( 'custom_footer_text', "&copy; 2018 - {$rt_year} Revive Today" ),
+							'a <a href="https://www.soupbowl.io">soupbowl</a> site',
+							'<a href="https://github.com/revivetoday/sparkling-child" target="_blank">Theme Details</a>'
+							);
+						?>
 					</div>
 				</div>
 			</div><!-- .site-info -->
