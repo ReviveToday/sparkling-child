@@ -1,22 +1,69 @@
 body {
-	background-image: url('img/login.jpg');
-	background-size: cover;
+	background-color: #3a6ea5;
+	color: black;
 }
 
-#loginform {
-	background-image: url('rt-corner-retro.svg');
-	background-size: 50px 50px;
-	background-repeat: no-repeat;
+.wp-core-ui .button-primary {
+	color: black!important;
+}
+
+#loginform,
+.wp-core-ui .button-primary,
+.wp-core-ui .button-primary:focus,
+.wp-core-ui .button-primary:hover,
+.wp-core-ui .button-primary:active {
+	background-color: #d4d0c8;
+	border: 2px solid;
+	border-top-color: #fff;
+	border-left-color: #fff;
+	border-bottom-color: #404040;
+	border-right-color: #404040;
+	border-radius: 0;
+	color: black;
+}
+
+#loginform:before {
+    content: "Login to WordPress";
+	color: #fff;
+	padding: 2px;
+	font-weight: bold;
+    background: rgb(10,36,106);
+	background: linear-gradient(90deg, rgba(10,36,106,1) 0%, rgba(166,202,240,1) 100%);
+	display: block;
+    position: relative;
+    left: -24px;
+    top: -28px;
+    width: 320px;
+}
+
+.wp-core-ui .button-primary:active {
+	border-top-color: #404040!important;
+	border-left-color: #404040!important;
+	border-bottom-color: #fff!important;
+	border-right-color: #fff!important;
+}
+
+#loginform input[type=text], #loginform input[type=text]:focus,
+#loginform input[type=password], #loginform input[type=password]:focus,
+#rememberme input[type="checkbox"] {
+	background-color: #fff!important;
+	border: 2px solid!important;
+	border-top-color: #404040!important;
+	border-left-color: #404040!important;
+	border-bottom-color: #fff!important;
+	border-right-color: #fff!important;
+	border-radius: 0;
+	box-shadow: none;
+}
+
+#loginform .wp-hide-pw {
+	display: none!important;
 }
 
 #login h1 a, .login h1 a {
-	height: 80px;
-	width: 100px;
-	background-size: 100px 100px;
-	background-repeat: no-repeat;
-	padding-bottom: 30px;
+	display: none;
 }
 
-.login #backtoblog a, .login #nav a {
-	color: #fff;
+.login #backtoblog, .login #nav {
+	display: none;
 }
