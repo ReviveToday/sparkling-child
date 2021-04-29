@@ -34,7 +34,7 @@ body {
 }
 
 #loginform:before {
-    content: "Login to WordPress";
+    content: "Welcome to WordPress";
 	color: #fff;
 	padding: 2px;
 	font-weight: bold;
@@ -85,6 +85,25 @@ body {
     top: -185px;
     left: 90px;
 }
+
+/*.submit:before {
+    content: "x";
+    display: inline-block;
+    position: relative;
+	left: 286px;
+    bottom: 212px;
+	background-color: #d4d0c8;
+	border: 2px solid;
+	border-top-color: #fff;
+	border-left-color: #fff;
+	border-bottom-color: #404040;
+	border-right-color: #404040;
+	border-radius: 0;
+	height: 14px;
+	padding-left: 3px;
+    padding-right: 3px;
+	line-height: 1;
+}*/
 
 #loginform .wp-hide-pw {
 	display: none!important;
