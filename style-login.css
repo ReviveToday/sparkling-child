@@ -7,6 +7,16 @@ body {
 	color: black!important;
 }
 
+#login {
+	width: 446px;
+}
+
+#loginform {
+	padding-left: 100px;
+	padding-bottom: 10px;
+    width: 320px;
+}
+
 #loginform,
 .wp-core-ui .button-primary,
 .wp-core-ui .button-primary:focus,
@@ -31,9 +41,21 @@ body {
 	background: linear-gradient(90deg, rgba(10,36,106,1) 0%, rgba(166,202,240,1) 100%);
 	display: block;
     position: relative;
-    left: -24px;
+	left: -100px;
     top: -28px;
-    width: 320px;
+    width: 450px;
+}
+
+#loginform:after {
+	content: "";
+    background-image: url("img/key.png");
+    z-index: 129;
+    position: relative;
+    width: 45px;
+    height: 48px;
+    display: block;
+    top: -150px;
+    left: -75px;
 }
 
 .wp-core-ui .button-primary:active {
